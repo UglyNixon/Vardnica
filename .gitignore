@@ -1,0 +1,9 @@
+/build
+node_modules
+.idea
+/storybook-static
+.npmrc
+/dist
+/extractedTranslations
+.package-lock.json
+.development.env

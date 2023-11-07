@@ -9,15 +9,17 @@ interface SwitcherThemeProps {
 export const ThemeSwitcher = ({ className }:SwitcherThemeProps) => {
     const { toggleTheme } = useTheme();
     return (
+
         <label
-            className={classNames(cls.ThemeSwitcher, {}, [className])}
-            htmlFor="langInput"
+            htmlFor="switcherInput"
+            className={classNames(cls.SwitcherTheme, {}, [className])}
         >
+            {}
             <input
-                className={classNames(cls.input,{},[])}
+                className={classNames(cls.input, {}, [])}
                 type="checkbox"
                 onChange={toggleTheme}
-                id="langInput"
+                id="switcherInput"
             />
             <span className={classNames(cls.slider, {}, [])} />
         </label>

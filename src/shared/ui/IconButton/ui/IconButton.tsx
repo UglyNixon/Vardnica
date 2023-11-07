@@ -1,4 +1,4 @@
-import React, {ButtonHTMLAttributes, FC} from 'react';
+import React, { ButtonHTMLAttributes, FC } from 'react';
 import { classNames } from 'shared/lib/classNames';
 import cls from './IconButton.module.scss';
 
@@ -10,7 +10,7 @@ export enum IconColor {
     MAIN='mainColor',
     SECONDARY='secondaryColor',
 }
-interface IconButtonProps  extends ButtonHTMLAttributes<HTMLButtonElement>{
+interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?:string,
     size:IconButtonSize,
     text?:string,
@@ -29,7 +29,7 @@ export const IconButton:FC<IconButtonProps> = (props) => {
         color,
         ...otherProps
     } = props;
-    console.log(color)
+    console.log(color);
     const mods:Record<string, boolean> = {
         [cls[size]]: true,
     };
@@ -39,6 +39,7 @@ export const IconButton:FC<IconButtonProps> = (props) => {
             className={classNames(cls.IconButton, mods, [])}
         >
             <button
+                {...otherProps}
                 type="button"
                 onClick={onClick}
                 className={classNames(cls.button, mods, [cls[color]])}

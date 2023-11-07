@@ -1,6 +1,5 @@
-import { IconButton } from "./ui/IconButton";
-
+import { IconButton } from './ui/IconButton';
 
 export {
-    IconButton
-}
+    IconButton,
+};
