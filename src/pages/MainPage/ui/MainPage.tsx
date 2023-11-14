@@ -1,14 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import cls from 'widgets/Navbar/ui/Navbar.module.scss';
-import { SwitcherTheme } from 'widgets/SwitcherTheme';
+import { ErrorButton } from 'app/providers/ErrorBoundry';
 
 const MainPage = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('main');
 
     return (
         <div>
             {t('Главная страница')}
+            <ErrorButton />
         </div>
     );
 };

@@ -10,19 +10,25 @@ interface SidebarProps {
     className?: string;
 }
 
-const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = ({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
     return (
-        <div className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
-            <IconButton onClick={onToggle} size={IconButtonSize.M} color={IconColor.SECONDARY}>
+        <div
+            data-testid="Sidebar"
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+        >
+            <IconButton
+                data-testid="Sidebar-toggle"
+                onClick={onToggle}
+                size={IconButtonSize.M}
+                color={IconColor.SECONDARY}
+            >
                 <MenuCloseIcon />
             </IconButton>
         </div>
 
     );
 };
-
-export default Sidebar;

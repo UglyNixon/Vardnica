@@ -7,9 +7,8 @@ import cls from './Navbar.module.scss';
 interface NavbarProps {
     className?:string;
 }
-
 export const Navbar = ({ className }:NavbarProps) => (
-    <div className={classNames(cls.Navbar, {}, [className])}>
+    <div data-testid="Navbar" className={classNames(cls.Navbar, {}, [className])}>
         <div className={cls.Navbar_Container}>
             <AppLink
                 key="main"
@@ -31,3 +30,4 @@ export const Navbar = ({ className }:NavbarProps) => (
         </div>
     </div>
 );
+

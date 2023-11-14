@@ -14,14 +14,16 @@ export const LangSwitcher:FC<LangSwitcherProps> = () => {
     };
     const { t } = useTranslation();
     return (
+
+
         <select
             className={cls.LangSwitcher}
-            defaultValue={i18n.language ? i18n.language : 'RU'}
+            defaultValue={i18n.language || 'RU'}
             onChange={(e) => toggle(e)}
         >
-            <option selected={i18n.language === 'RU'}>{t('RU')}</option>
-            <option selected={i18n.language === 'LV'}>{t('LV')}</option>
-            {/* <option selected={i18n.language === 'EN'}>{t('EN')}</option> */}
+            <option value="RU" selected={i18n.language === 'RU'}>{t('RU')}</option>
+            <option value="LV" selected={i18n.language === 'LV'}>{t('LV')}</option>
+            {/* <option value="EN">{t('EN')}</option> */}
         </select>
     );
 };
