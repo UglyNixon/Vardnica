@@ -14,6 +14,7 @@ export default {
     },
 } as Meta<typeof Button>;
 
+// eslint-disable-next-line react/jsx-props-no-spreading
 const Template: StoryFn<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
@@ -26,4 +27,3 @@ PrimaryDark.args = {
     children: 'Text',
 };
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
-

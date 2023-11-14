@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import {
     ThemeDecorator,
 } from 'shared/config/storybook/ThemeDecorator';
-import {Navbar} from './Navbar';
+import { Navbar } from './Navbar';
 
 export default {
     title: 'widget/Navbar',

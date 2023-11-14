@@ -15,7 +15,6 @@ export const LangSwitcher:FC<LangSwitcherProps> = () => {
     const { t } = useTranslation();
     return (
 
-
         <select
             className={cls.LangSwitcher}
             defaultValue={i18n.language || 'RU'}
